@@ -165,9 +165,6 @@ visible = false
 [node name="robot_154" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="55"]
 visible = false
 
-[node name="Object_128" parent="Sketchfab_model/root/GLTF_SceneRootNode/robot_154" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
 [node name="Plane_003_155" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="56"]
 transform = Transform3D(-0.0044131, 0.439353, -1.15876e-05, 0.0530244, 0.000197016, 0.438225, 0.74266, 0.00259669, -0.0312884, 4.40736, 1.28058, -6.05787)
 
