@@ -1,10 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://pbv851bd7ubu"]
+[gd_scene load_steps=20 format=3 uid="uid://pbv851bd7ubu"]
 
 [ext_resource type="PackedScene" uid="uid://cshqvmjtwf07l" path="res://assets/models/m3_mart/m3_mart.glb" id="1_0afjc"]
 [ext_resource type="Texture2D" uid="uid://b0y8a6aqwgfgg" path="res://assets/textures/pokeSassy.png" id="2_qrpwn"]
 [ext_resource type="Texture2D" uid="uid://dp7tpdypcrho7" path="res://assets/textures/pokeOffstream.png" id="2_yxsug"]
 [ext_resource type="Texture2D" uid="uid://dxx1gjevkvm84" path="res://assets/textures/pokeCarnage.png" id="4_3pjxt"]
+[ext_resource type="AudioStream" uid="uid://vstk7dm862yr" path="res://assets/sfx/light_buzz.ogg" id="5_e26qp"]
 [ext_resource type="Texture2D" uid="uid://bp1yvwxb4kjdb" path="res://assets/textures/pokeTruth.png" id="5_ko6hi"]
+[ext_resource type="AudioStream" uid="uid://lc3duuhfhwqm" path="res://assets/music/sounds_for_the_supermarket_1_(1975).ogg" id="7_fk6ub"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cen04"]
 resource_name = "Material.020"
@@ -190,6 +192,13 @@ light_energy = 1.667
 omni_range = 9.439
 omni_attenuation = 0.594604
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/Cube_244_164/Cube_227_163" index="5"]
+transform = Transform3D(1.97365, 0, 0, 0, -1.63663e-07, 3.74418, 0, -1.97365, -8.6271e-08, 0, -0.167135, 0)
+stream = ExtResource("5_e26qp")
+volume_db = -8.0
+autoplay = true
+emission_angle_degrees = 77.0
+
 [node name="Cube_167_168" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="65"]
 transform = Transform3D(-0.380053, 0, -0.335082, 0, 0.506675, 0, 0.335082, 0, -0.380053, -3.76106, 2.69504, -6.8146)
 visible = false
@@ -221,3 +230,11 @@ visible = false
 
 [node name="Ar16_180" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="77"]
 visible = false
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="1"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.0222603, 2.66352, -8.71021)
+stream = ExtResource("7_fk6ub")
+volume_db = -8.55
+autoplay = true
+emission_angle_enabled = true
+emission_angle_degrees = 79.0
