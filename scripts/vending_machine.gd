@@ -2,8 +2,8 @@ extends Node3D
 
 # references
 @export var sfx_button_press: PackedScene
-@onready var screen_text: Label3D = $Screen/Text
 @onready var sfx_error: AudioStreamPlayer3D = $Screen/sfx_error
+@onready var screen_text: Label3D = $Screen/Text
 
 # state
 var letter: String = ""
@@ -40,7 +40,7 @@ func clicked_button(button: String) -> void:
 			return
 
 		# letter
-		if letter == "" and (button == "A" or button == "B" or button ==  "C" or button == "D"):
+		if letter == "" and is_input_letter(button):
 			# wait a second to create illusion of slow processing
 			processing = true
 			await get_tree().create_timer(0.3).timeout
@@ -53,11 +53,10 @@ func clicked_button(button: String) -> void:
 			screen_text.text = letter
 
 		# number
-		elif letter != "" and (button != "A" and button != "B" and button !=  "C" and button != "D") and (((letter == "A" or letter == "B") and int(button) <= 3) or ((letter == "C" or letter == "D") and int(button) <= 6)):
+		elif letter != "" and not is_input_letter(button) and ((is_double_spiral(letter) and int(button) <= 3) or (not is_double_spiral(letter) and int(button) <= 6)):
 			# wait a second to create illusion of slow processing
 			processing = true
 			await get_tree().create_timer(0.3).timeout
-			processing = false
 
 			# store number
 			number = button
@@ -66,10 +65,7 @@ func clicked_button(button: String) -> void:
 			screen_text.text = letter + number
 
 			# trigger spin of spiral for corresponding item
-			await get_tree().create_timer(2).timeout
-			letter = ""
-			number = ""
-			screen_text.text = ""
+			drop_item()
 
 		# wrong input
 		else:
@@ -80,3 +76,44 @@ func clicked_button(button: String) -> void:
 
 			# play error sound
 			sfx_error.play()
+
+# spin spiral to drop item
+func drop_item() -> void:
+	# get input
+	var input: String = letter + number
+	
+	# init tween
+	var tween = create_tween().set_loops(1).set_parallel(true)
+	tween.connect("finished", reset_input)
+
+	# spin spiral
+	if is_double_spiral(letter):
+		# start tween
+		tween.tween_property(get_node("Vending Machine/Spirals/" + input + " Left"), "rotation:z", deg_to_rad(-360), 3).as_relative()
+		tween.tween_property(get_node("Vending Machine/Spirals/" + input + " Right"), "rotation:z", deg_to_rad(360), 3).as_relative()
+	else:
+		tween.tween_property(get_node("Vending Machine/Spirals/" + input), "rotation:z", deg_to_rad(-360), 3).as_relative()
+
+func reset_input() -> void:
+	print("reset")
+	# reset screen
+	letter = ""
+	number = ""
+	screen_text.text = ""
+
+	# allow input
+	processing = false
+
+# check if input is double spiral
+func is_double_spiral(input: String) -> bool:
+	if (input == "A" or input == "B"):
+		return true
+	else:
+		return false
+
+# check if input is letter
+func is_input_letter(input: String) -> bool:
+	if input == "A" or input == "B" or input ==  "C" or input == "D":
+		return true
+	else:
+		return false
