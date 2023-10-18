@@ -23,7 +23,7 @@ FullscreenControl="*res://addons/fullscreen_control/FullscreenControl.gd"
 
 window/size/viewport_width=640
 window/size/viewport_height=480
-window/size/mode=3
+window/size/mode=4
 window/size/initial_position_type=3
 window/stretch/mode="viewport"
 
