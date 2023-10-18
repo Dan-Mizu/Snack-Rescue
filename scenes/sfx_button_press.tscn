@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://kas4btnssubl"]
+
+[ext_resource type="AudioStream" uid="uid://bcadxq8qexgh0" path="res://assets/sfx/click.1.ogg" id="1_f7u2h"]
+[ext_resource type="AudioStream" uid="uid://dq8i4v2v8qsva" path="res://assets/sfx/click.2.ogg" id="2_ajdpl"]
+[ext_resource type="Script" path="res://scripts/sfx.gd" id="3_1kfdi"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_p7w3g"]
+streams_count = 2
+random_pitch = 1.2
+stream_0/stream = ExtResource("1_f7u2h")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_ajdpl")
+stream_1/weight = 1.0
+
+[node name="sfx_button_press" type="AudioStreamPlayer3D"]
+stream = SubResource("AudioStreamRandomizer_p7w3g")
+volume_db = -20.0
+max_db = 1.0
+script = ExtResource("3_1kfdi")
+
+[connection signal="finished" from="." to="." method="_on_finished"]
