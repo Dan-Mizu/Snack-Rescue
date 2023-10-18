@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1vn8u27fvj6c"]
+[gd_scene load_steps=10 format=3 uid="uid://d1vn8u27fvj6c"]
 
 [ext_resource type="PackedScene" uid="uid://uxmsgcncysqe" path="res://assets/models/vending_machine/vending_machine.glb" id="1_aw2yc"]
 [ext_resource type="Script" path="res://scripts/vending_machine.gd" id="2_tnprc"]
 [ext_resource type="PackedScene" uid="uid://kas4btnssubl" path="res://scenes/sfx_button_press.tscn" id="3_lms2y"]
+[ext_resource type="FontFile" uid="uid://bfsy80o1i0gj6" path="res://assets/fonts/PICHABS_.ttf" id="4_dobf1"]
+[ext_resource type="AudioStream" uid="uid://ca8dwbyu5o7pt" path="res://assets/sfx/error.ogg" id="5_jb3lh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dtlx4"]
 size = Vector3(0.104893, 0.122269, 0.001)
@@ -10,11 +12,16 @@ size = Vector3(0.104893, 0.122269, 0.001)
 [sub_resource type="BoxShape3D" id="BoxShape3D_kfdfw"]
 size = Vector3(0.0588675, 0.0686649, 0.001)
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_hk704"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jnqw"]
+albedo_color = Color(0, 0, 0, 1)
+
 [node name="vending_machine" instance=ExtResource("1_aw2yc")]
 script = ExtResource("2_tnprc")
 sfx_button_press = ExtResource("3_lms2y")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="." index="1"]
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0675988, 3.493, 0.461545)
 spot_range = 7.071
 spot_attenuation = 0.870551
@@ -113,6 +120,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.949, 2.149, 0.859)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Numpad/9" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00650531, 0.0369484, -0.101455)
 shape = SubResource("BoxShape3D_kfdfw")
+
+[node name="Screen" type="MeshInstance3D" parent="." index="3"]
+transform = Transform3D(0.181594, 0, 0, 0, -4.37114e-08, -0.128498, 0, 1, -5.61685e-09, 0.850259, 3.06302, 0.733226)
+mesh = SubResource("PlaneMesh_hk704")
+surface_material_override/0 = SubResource("StandardMaterial3D_7jnqw")
+
+[node name="Text" type="Label3D" parent="Screen" index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.3711e-08, -0.795637, 0.000517666, 0)
+pixel_size = 0.01
+modulate = Color(0.627451, 0, 0, 1)
+font = ExtResource("4_dobf1")
+font_size = 100
+outline_size = 0
+horizontal_alignment = 0
+
+[node name="sfx_error" type="AudioStreamPlayer3D" parent="Screen" index="1"]
+transform = Transform3D(5.50678, 0, 0, 0, -3.4017e-07, -1, 0, 7.78219, -4.37114e-08, -0.02105, 0.0148609, 0.0889301)
+stream = ExtResource("5_jb3lh")
+emission_angle_enabled = true
+emission_angle_degrees = 63.0
 
 [connection signal="input_event" from="Numpad/A" to="." method="_on_a_input_event" binds= ["A"]]
 [connection signal="input_event" from="Numpad/B" to="." method="_on_a_input_event" binds= ["B"]]
