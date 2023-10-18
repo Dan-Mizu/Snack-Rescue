@@ -1,11 +1,190 @@
-[gd_scene load_steps=2 format=3 uid="uid://pbv851bd7ubu"]
+[gd_scene load_steps=18 format=3 uid="uid://pbv851bd7ubu"]
 
 [ext_resource type="PackedScene" uid="uid://cshqvmjtwf07l" path="res://assets/models/m3_mart/m3_mart.glb" id="1_0afjc"]
+[ext_resource type="Texture2D" uid="uid://b0y8a6aqwgfgg" path="res://assets/textures/pokeSassy.png" id="2_qrpwn"]
+[ext_resource type="Texture2D" uid="uid://dp7tpdypcrho7" path="res://assets/textures/pokeOffstream.png" id="2_yxsug"]
+[ext_resource type="Texture2D" uid="uid://dxx1gjevkvm84" path="res://assets/textures/pokeCarnage.png" id="4_3pjxt"]
+[ext_resource type="Texture2D" uid="uid://bp1yvwxb4kjdb" path="res://assets/textures/pokeTruth.png" id="5_ko6hi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cen04"]
+resource_name = "Material.020"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_yxsug")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_s2xya"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2.00001),
+"format": 4097,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"name": "Material.020",
+"primitive": 3,
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gkvkf"]
+resource_name = "Sketchfab_Scene_Object_70"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2.00001),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63),
+"format": 4119,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_cen04"),
+"name": "Material.020",
+"primitive": 3,
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 255, 127, 255, 255, 255, 255, 255, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 255, 127, 255, 255, 255, 255, 255, 63, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 255, 127, 255, 255, 255, 255, 255, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191, 255, 127, 255, 255, 255, 255, 255, 63)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_s2xya")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_57jt1"]
+resource_name = "Material.019"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_qrpwn")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ct4o3"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2.00001),
+"format": 4097,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"name": "Material.019",
+"primitive": 3,
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sbh7r"]
+resource_name = "Sketchfab_Scene_Object_71"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2.00001),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63),
+"format": 4119,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_57jt1"),
+"name": "Material.019",
+"primitive": 3,
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 255, 127, 255, 255, 255, 255, 255, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 255, 127, 255, 255, 255, 255, 255, 63, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 255, 127, 255, 255, 255, 255, 255, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191, 255, 127, 255, 255, 255, 255, 255, 63)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ct4o3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjr4o"]
+resource_name = "Material.018"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("4_3pjxt")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_x4viy"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2.00001),
+"format": 4097,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"name": "Material.018",
+"primitive": 3,
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nnykg"]
+resource_name = "Sketchfab_Scene_Object_72"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2.00001),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63),
+"format": 4119,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_vjr4o"),
+"name": "Material.018",
+"primitive": 3,
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 255, 127, 255, 255, 255, 255, 255, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 255, 127, 255, 255, 255, 255, 255, 63, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 255, 127, 255, 255, 255, 255, 255, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191, 255, 127, 255, 255, 255, 255, 255, 63)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_x4viy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75lsp"]
+resource_name = "book_4_mat"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("5_ko6hi")
+roughness = 0.6
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_imrex"]
+_surfaces = [{
+"aabb": AABB(-0.653344, -0.00935507, -0.442299, 1.30669, 0.0187098, 0.884597),
+"format": 4097,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 3, 0, 4, 0, 2, 0, 3, 0, 5, 0, 4, 0, 5, 0, 6, 0, 4, 0, 5, 0, 7, 0, 6, 0, 7, 0, 1, 0, 6, 0, 7, 0, 0, 0, 1, 0, 1, 0, 4, 0, 6, 0, 1, 0, 2, 0, 4, 0, 7, 0, 3, 0, 0, 0, 7, 0, 5, 0, 3, 0),
+"name": "book_4_mat",
+"primitive": 3,
+"vertex_count": 8,
+"vertex_data": PackedByteArray(146, 65, 39, 191, 0, 70, 25, 188, 168, 188, 169, 62, 118, 133, 21, 63, 0, 70, 25, 188, 248, 116, 226, 62, 118, 133, 21, 63, 128, 68, 25, 60, 248, 116, 226, 62, 146, 65, 39, 191, 128, 68, 25, 60, 168, 188, 169, 62, 150, 65, 39, 63, 128, 68, 25, 60, 184, 188, 169, 190, 114, 133, 21, 191, 128, 68, 25, 60, 248, 116, 226, 190, 150, 65, 39, 63, 0, 70, 25, 188, 184, 188, 169, 190, 114, 133, 21, 191, 0, 70, 25, 188, 248, 116, 226, 190)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_icrtx"]
+resource_name = "Sketchfab_Scene_Object_98"
+_surfaces = [{
+"aabb": AABB(-0.653344, -0.00935507, -0.442299, 1.30669, 0.0187098, 0.884597),
+"attribute_data": PackedByteArray(34, 166, 144, 189, 0, 29, 189, 187, 34, 166, 144, 189, 0, 29, 189, 187, 34, 166, 144, 189, 186, 154, 128, 63, 107, 194, 131, 188, 186, 154, 128, 63, 107, 194, 131, 188, 186, 154, 128, 63, 107, 194, 131, 188, 0, 29, 189, 187, 71, 81, 55, 58, 0, 29, 189, 187, 71, 81, 55, 58, 0, 29, 189, 187, 71, 81, 55, 58, 186, 154, 128, 63, 161, 23, 122, 63, 186, 154, 128, 63, 161, 23, 122, 63, 186, 154, 128, 63, 161, 23, 122, 63, 0, 29, 189, 187, 50, 191, 126, 63, 0, 29, 189, 187, 50, 191, 126, 63, 186, 154, 128, 63, 198, 136, 134, 63, 186, 154, 128, 63, 198, 136, 134, 63, 0, 29, 189, 187, 98, 10, 137, 63, 0, 29, 189, 187, 98, 10, 137, 63, 0, 29, 189, 187, 98, 10, 137, 63, 186, 154, 128, 63, 143, 22, 3, 64, 186, 154, 128, 63, 143, 22, 3, 64, 186, 154, 128, 63, 143, 22, 3, 64, 0, 29, 189, 187, 252, 221, 252, 63, 199, 115, 89, 63, 252, 221, 252, 63, 199, 115, 89, 63, 53, 225, 129, 63, 184, 226, 84, 63, 97, 179, 129, 63, 154, 73, 94, 63, 97, 179, 129, 63, 154, 73, 94, 63, 40, 176, 252, 63, 110, 31, 99, 63, 40, 176, 252, 63, 225, 19, 102, 63, 97, 179, 129, 63, 13, 62, 97, 63, 141, 133, 129, 63, 240, 164, 106, 63, 171, 38, 252, 63, 195, 122, 111, 63),
+"format": 4119,
+"index_count": 36,
+"index_data": PackedByteArray(1, 0, 4, 0, 2, 0, 0, 0, 5, 0, 3, 0, 6, 0, 9, 0, 8, 0, 7, 0, 11, 0, 10, 0, 12, 0, 14, 0, 13, 0, 12, 0, 15, 0, 14, 0, 17, 0, 20, 0, 18, 0, 16, 0, 21, 0, 19, 0, 22, 0, 25, 0, 24, 0, 23, 0, 27, 0, 26, 0, 28, 0, 30, 0, 29, 0, 28, 0, 31, 0, 30, 0),
+"material": SubResource("StandardMaterial3D_75lsp"),
+"name": "book_4_mat",
+"primitive": 3,
+"vertex_count": 32,
+"vertex_data": PackedByteArray(146, 65, 39, 191, 0, 70, 25, 188, 168, 188, 169, 62, 122, 117, 255, 127, 255, 127, 255, 255, 146, 65, 39, 191, 0, 70, 25, 188, 168, 188, 169, 62, 122, 117, 255, 127, 255, 127, 255, 255, 118, 133, 21, 63, 0, 70, 25, 188, 248, 116, 226, 62, 122, 117, 255, 127, 255, 127, 255, 255, 118, 133, 21, 63, 128, 68, 25, 60, 248, 116, 226, 62, 122, 117, 255, 127, 255, 127, 255, 255, 118, 133, 21, 63, 128, 68, 25, 60, 248, 116, 226, 62, 122, 117, 255, 127, 255, 127, 255, 255, 146, 65, 39, 191, 128, 68, 25, 60, 168, 188, 169, 62, 122, 117, 255, 127, 255, 127, 255, 255, 146, 65, 39, 191, 128, 68, 25, 60, 168, 188, 169, 62, 255, 127, 255, 255, 255, 255, 188, 250, 146, 65, 39, 191, 128, 68, 25, 60, 168, 188, 169, 62, 255, 127, 255, 255, 255, 255, 65, 133, 118, 133, 21, 63, 128, 68, 25, 60, 248, 116, 226, 62, 255, 127, 255, 255, 255, 255, 188, 250, 150, 65, 39, 63, 128, 68, 25, 60, 184, 188, 169, 190, 255, 127, 255, 255, 255, 255, 188, 250, 150, 65, 39, 63, 128, 68, 25, 60, 184, 188, 169, 190, 255, 127, 255, 255, 255, 255, 65, 133, 114, 133, 21, 191, 128, 68, 25, 60, 248, 116, 226, 190, 255, 127, 255, 255, 255, 255, 65, 133, 114, 133, 21, 191, 128, 68, 25, 60, 248, 116, 226, 190, 255, 255, 122, 245, 255, 127, 0, 128, 150, 65, 39, 63, 128, 68, 25, 60, 184, 188, 169, 190, 255, 255, 122, 245, 255, 127, 0, 128, 150, 65, 39, 63, 0, 70, 25, 188, 184, 188, 169, 190, 255, 255, 122, 245, 255, 127, 0, 128, 114, 133, 21, 191, 0, 70, 25, 188, 248, 116, 226, 190, 255, 255, 122, 245, 255, 127, 0, 128, 114, 133, 21, 191, 0, 70, 25, 188, 248, 116, 226, 190, 255, 127, 0, 0, 123, 117, 255, 191, 114, 133, 21, 191, 0, 70, 25, 188, 248, 116, 226, 190, 255, 127, 0, 0, 123, 117, 255, 191, 150, 65, 39, 63, 0, 70, 25, 188, 184, 188, 169, 190, 255, 127, 0, 0, 123, 117, 255, 191, 118, 133, 21, 63, 0, 70, 25, 188, 248, 116, 226, 62, 255, 127, 0, 0, 123, 117, 255, 191, 118, 133, 21, 63, 0, 70, 25, 188, 248, 116, 226, 62, 255, 127, 0, 0, 123, 117, 255, 191, 146, 65, 39, 191, 0, 70, 25, 188, 168, 188, 169, 62, 255, 127, 0, 0, 123, 117, 255, 191, 118, 133, 21, 63, 0, 70, 25, 188, 248, 116, 226, 62, 122, 245, 255, 127, 151, 117, 80, 191, 118, 133, 21, 63, 0, 70, 25, 188, 248, 116, 226, 62, 122, 245, 255, 127, 152, 117, 75, 191, 150, 65, 39, 63, 0, 70, 25, 188, 184, 188, 169, 190, 122, 245, 255, 127, 151, 117, 80, 191, 150, 65, 39, 63, 128, 68, 25, 60, 184, 188, 169, 190, 122, 245, 255, 127, 151, 117, 80, 191, 150, 65, 39, 63, 128, 68, 25, 60, 184, 188, 169, 190, 122, 245, 255, 127, 152, 117, 75, 191, 118, 133, 21, 63, 128, 68, 25, 60, 248, 116, 226, 62, 122, 245, 255, 127, 152, 117, 75, 191, 114, 133, 21, 191, 0, 70, 25, 188, 248, 116, 226, 190, 0, 0, 131, 138, 141, 254, 50, 133, 146, 65, 39, 191, 0, 70, 25, 188, 168, 188, 169, 62, 0, 0, 131, 138, 141, 254, 50, 133, 146, 65, 39, 191, 128, 68, 25, 60, 168, 188, 169, 62, 0, 0, 131, 138, 141, 254, 50, 133, 114, 133, 21, 191, 128, 68, 25, 60, 248, 116, 226, 190, 0, 0, 131, 138, 141, 254, 50, 133)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_imrex")
 
 [node name="m3_mart" instance=ExtResource("1_0afjc")]
 
+[node name="Candys_Food_shelf_03_0_33" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="12"]
+visible = false
+
 [node name="SG-R_PC_PROP_S_G_C_Vending_Machine_002_LOD1_153" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="54"]
 visible = false
+
+[node name="robot_154" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="55"]
+visible = false
+
+[node name="Object_128" parent="Sketchfab_model/root/GLTF_SceneRootNode/robot_154" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Plane_003_155" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="56"]
+transform = Transform3D(-0.0044131, 0.439353, -1.15876e-05, 0.0530244, 0.000197016, 0.438225, 0.74266, 0.00259669, -0.0312884, 4.40736, 1.28058, -6.05787)
+
+[node name="Object_130" parent="Sketchfab_model/root/GLTF_SceneRootNode/Plane_003_155" index="0"]
+transform = Transform3D(0.90888, -3.95812e-09, -6.78003e-07, 2.04891e-08, 0.99946, -6.19912e-09, 1.77324e-06, 6.31553e-09, 1.00651, 0, 0, 0)
+mesh = SubResource("ArrayMesh_gkvkf")
+
+[node name="Object_132" parent="Sketchfab_model/root/GLTF_SceneRootNode/Plane_002_156" index="0"]
+transform = Transform3D(0.997564, 0.00340767, -0.0696732, 8.73184e-08, -0.998806, -0.0488498, -0.0697565, 0.0487308, -0.996373, 0, 0, 0)
+mesh = SubResource("ArrayMesh_sbh7r")
+
+[node name="Plane_001_157" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="58"]
+transform = Transform3D(0.438526, 0.00303555, -0.00463606, 0.00371495, -0.00610464, 0.555785, 0.00348817, -0.375124, -0.00908216, 3.78422, 1.68214, -9.03411)
+
+[node name="Object_134" parent="Sketchfab_model/root/GLTF_SceneRootNode/Plane_001_157" index="0"]
+transform = Transform3D(0.993364, 0.0022795, -0.0722148, -0.00235068, 1.00397, -0.000587791, 0.095337, 0.00100307, 0.752429, 0, 0, 0)
+mesh = SubResource("ArrayMesh_nnykg")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/Cube_244_164/Cube_227_163" index="4"]
 transform = Transform3D(1.97365, 0, 0, 0, 3.74418, 0, 0, 0, 1.97365, -0.00369245, -0.372452, 0.00567675)
@@ -22,6 +201,9 @@ visible = false
 transform = Transform3D(-0.00789707, 0, 0.305839, 0, 0.0508232, 0, -1.26912, 0, -0.00190308, -3.84652, 2.23874, -3.24799)
 visible = false
 
+[node name="Object_177" parent="Sketchfab_model/root/GLTF_SceneRootNode/book_7_book_4_mat_0_001_174" index="0"]
+mesh = SubResource("ArrayMesh_icrtx")
+
 [node name="Body_175" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="72"]
 transform = Transform3D(0.901591, -0.159096, 0.402271, 0.00184244, 0.931318, 0.364203, -0.432585, -0.327621, 0.839961, -3.77604, 2.38879, -5.75089)
 visible = false
@@ -30,6 +212,15 @@ visible = false
 transform = Transform3D(1.23598e-08, 0, -0.146628, 0, 0.146628, 0, 0.146628, 0, 1.23598e-08, -3.45148, 1.97294, -4.06583)
 visible = false
 
+[node name="Ar19_177" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="74"]
+visible = false
+
+[node name="Ar18_178" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="75"]
+visible = false
+
 [node name="Ar17_179" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="76"]
 transform = Transform3D(-0.112324, 0, -1.69605e-08, 0, 0.112324, 0, 1.69605e-08, 0, -0.112324, -3.89061, 2.05983, -1.97848)
+visible = false
+
+[node name="Ar16_180" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="77"]
 visible = false
