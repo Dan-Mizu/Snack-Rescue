@@ -4,6 +4,7 @@ extends Node3D
 @export var sfx_button_press: PackedScene
 @onready var sfx_error: AudioStreamPlayer3D = $Screen/sfx_error
 @onready var screen_text: Label3D = $Screen/Text
+@onready var snack_group: Node3D = $Snacks
 
 # state
 var letter: String = ""
@@ -94,8 +95,13 @@ func drop_item() -> void:
 	else:
 		tween.tween_property(get_node("Vending Machine/Spirals/" + input), "rotation:z", deg_to_rad(-360), 3).as_relative()
 
+	# get snacks
+	var snacks = get_node("Snacks/" + input)
+	if snacks:
+		for snack in snacks.get_children():
+			tween.tween_property(snack, "position:z", 0.18, 3).as_relative()
+
 func reset_input() -> void:
-	print("reset")
 	# reset screen
 	letter = ""
 	number = ""
@@ -117,3 +123,13 @@ func is_input_letter(input: String) -> bool:
 		return true
 	else:
 		return false
+
+# triggers when snack enters fall area
+func _on_fall_area_body_entered(body: Node3D) -> void:
+	if body is RigidBody3D and body.lock_rotation == true:
+		# allow snack to rotate
+		body.lock_rotation = false
+
+		# reparent to stop it from being tweened
+		body.get_parent().remove_child(body)
+		snack_group.add_child(body)

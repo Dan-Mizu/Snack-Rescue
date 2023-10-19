@@ -195,7 +195,7 @@ omni_attenuation = 0.594604
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/Cube_244_164/Cube_227_163" index="5"]
 transform = Transform3D(1.97365, 0, 0, 0, -1.63663e-07, 3.74418, 0, -1.97365, -8.6271e-08, 0, -0.167135, 0)
 stream = ExtResource("5_e26qp")
-volume_db = -8.0
+volume_db = -12.0
 autoplay = true
 emission_angle_degrees = 77.0
 

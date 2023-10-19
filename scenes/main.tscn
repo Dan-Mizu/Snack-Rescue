@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bskt72hmuv0fo"]
+[gd_scene load_steps=13 format=3 uid="uid://bskt72hmuv0fo"]
 
 [ext_resource type="PackedScene" uid="uid://d1vn8u27fvj6c" path="res://scenes/vending_machine.tscn" id="1_7dkq1"]
 [ext_resource type="PackedScene" uid="uid://pbv851bd7ubu" path="res://scenes/m_3_mart.tscn" id="1_dyy1n"]
@@ -8,6 +8,9 @@
 [ext_resource type="FontFile" uid="uid://bx4bjftf8vtge" path="res://assets/fonts/HUSKYSTA.TTF" id="5_38mrb"]
 [ext_resource type="FontFile" uid="uid://dnkdgyytxs1yu" path="res://assets/fonts/ka1.ttf" id="6_h0tv6"]
 [ext_resource type="Script" path="res://scripts/hint.gd" id="7_kb0ax"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tfj3w"]
+size = Vector3(26.5125, 0.001, 23.2928)
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3xklw"]
 panorama = ExtResource("4_2ihld")
@@ -34,6 +37,12 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.362
 
 [node name="m3_mart" parent="." instance=ExtResource("1_dyy1n")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0316759, -12.0889)
+shape = SubResource("BoxShape3D_tfj3w")
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.7, -0.53)
